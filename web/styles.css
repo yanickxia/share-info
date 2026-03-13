@@ -221,6 +221,7 @@ h2 {
   min-height: 220px;
   max-height: 420px;
   overflow: auto;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 0.85rem;
@@ -228,6 +229,9 @@ h2 {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.84rem;
   line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @keyframes riseIn {
