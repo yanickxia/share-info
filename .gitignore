@@ -1,0 +1,19 @@
+# OS / Editor
+.DS_Store
+.idea/
+
+# Build outputs
+/dist/
+/share-info
+
+# Local encrypted snapshots / decrypted data
+*.enc
+*.b64
+env.snapshot.enc
+env.snapshot.enc.b64
+env.snapshot.json
+
+# Go test / coverage
+*.test
+*.out
+coverage.*

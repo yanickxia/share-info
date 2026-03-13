@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Env Snapshot Decryptor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shape shape-a" aria-hidden="true"></div>
+  <div class="shape shape-b" aria-hidden="true"></div>
+
+  <main class="shell">
+    <header class="top">
+      <p class="tag">Local-Only Tool</p>
+      <h1>ENV Snapshot Decryptor</h1>
+      <p class="hint">
+        Runs fully in your browser. No server upload.
+      </p>
+    </header>
+
+    <section class="card" aria-labelledby="decrypt-title">
+      <h2 id="decrypt-title">Decrypt Input</h2>
+
+      <label class="field-label" for="fileInput">1) Upload encrypted file (.enc / .b64)</label>
+      <input id="fileInput" class="file-input" type="file" />
+
+      <div class="or">or</div>
+
+      <label class="field-label" for="cipherInput">2) Paste base64 ciphertext</label>
+      <textarea id="cipherInput" class="text-area" placeholder="Paste base64 content here"></textarea>
+
+      <label class="field-label" for="passwordInput">Password</label>
+      <input id="passwordInput" class="text-input" type="password" autocomplete="current-password" placeholder="Type password" />
+
+      <div class="actions">
+        <button id="decryptBtn" class="btn btn-primary" type="button">Decrypt</button>
+        <button id="clearBtn" class="btn btn-ghost" type="button">Clear</button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card output" aria-labelledby="output-title">
+      <div class="row">
+        <h2 id="output-title">Decrypted JSON</h2>
+        <div class="actions compact">
+          <button id="copyBtn" class="btn btn-ghost" type="button">Copy</button>
+          <button id="downloadBtn" class="btn btn-ghost" type="button">Download</button>
+        </div>
+      </div>
+      <pre id="output" class="output-box">No data yet.</pre>
+    </section>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
